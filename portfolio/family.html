@@ -94,10 +94,9 @@ Family Stories
 </h2>
 
 
-<div class="gallery-grid">
+<div class="gallery-grid" id="family-gallery">
 
-<img src="../images/family/seoul-family-photographer.jpg">
-
+</div>
 <img src="../images/family/family-01.jpg">
 
 <img src="../images/family/family-02.jpg">
@@ -137,7 +136,37 @@ Book a Session
 
 
 
+<script>
 
+fetch("../data/family.json")
+
+.then(response => response.json())
+
+.then(images => {
+
+const gallery = document.getElementById("family-gallery");
+
+
+images.forEach(image => {
+
+
+const img = document.createElement("img");
+
+img.src = "../images/family/" + image;
+
+img.alt = "Seoul Family Photographer";
+
+
+gallery.appendChild(img);
+
+
+});
+
+
+});
+
+
+</script>
 
 </body>
 
