@@ -463,3 +463,47 @@ nav {
 
 
 }
+.gallery {
+  padding: 100px 80px;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+@media(max-width:900px){
+
+  .gallery {
+    padding: 80px 25px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 300px;
+  }
+
+}
