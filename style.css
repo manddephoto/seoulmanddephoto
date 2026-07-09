@@ -5,6 +5,11 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
@@ -12,87 +17,120 @@ body {
 }
 
 
+
 .header {
+
   position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 35px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-  color: white;
+  top:0;
+  left:0;
+  width:100%;
+
+  padding:35px 60px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  color:white;
+
+  z-index:10;
+
 }
+
 
 
 .logo {
-  font-size: 22px;
-  letter-spacing: 2px;
+
+  font-size:22px;
+  letter-spacing:2px;
+  font-weight:300;
+
 }
+
 
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 35px;
-  font-size: 14px;
-  letter-spacing: 1px;
+
+  color:white;
+  text-decoration:none;
+
+  margin-left:35px;
+
+  font-size:14px;
+  letter-spacing:1px;
+
 }
+
+
+
 
 
 
 .hero {
 
-  height: 100vh;
+  height:100vh;
 
   background:
   linear-gradient(
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.35)
+  rgba(0,0,0,.35),
+  rgba(0,0,0,.35)
   ),
   url("images/hero/hero.jpg");
 
-  background-size: cover;
-  background-position: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size:cover;
+  background-position:center;
 
-  text-align: center;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+
+  text-align:center;
 
   color:white;
 
-}
-
-
-
-.hero-text h1 {
-
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: 3px;
 
 }
 
 
 
-.hero-text p {
+.hero-content h1 {
+
+  font-size:70px;
+
+  font-weight:300;
+
+  letter-spacing:4px;
+
+}
+
+
+
+.hero-content p {
 
   margin-top:25px;
-  font-size:22px;
+
+  font-size:24px;
+
+  line-height:1.5;
 
 }
 
 
 
-.hero-text span {
+.hero-content span {
 
   display:block;
-  margin-top:10px;
+
+  margin-top:15px;
+
   font-size:16px;
 
 }
+
 
 
 
@@ -108,7 +146,7 @@ nav a {
 
   display:inline-block;
 
-  padding:15px 35px;
+  padding:16px 40px;
 
   border:1px solid white;
 
@@ -117,8 +155,6 @@ nav a {
   text-decoration:none;
 
   margin:10px;
-
-  font-size:14px;
 
   transition:.3s;
 
@@ -129,6 +165,7 @@ nav a {
 .buttons a:hover {
 
   background:white;
+
   color:#222;
 
 }
@@ -137,7 +174,8 @@ nav a {
 
 
 
-.stories {
+
+.portfolio {
 
   padding:120px 60px;
 
@@ -145,63 +183,72 @@ nav a {
 
 
 
-.stories h2 {
+.portfolio h2 {
 
   text-align:center;
 
-  font-size:40px;
+  font-size:45px;
 
   font-weight:300;
 
-  margin-bottom:70px;
+  margin-bottom:80px;
 
 }
 
 
 
-.story-grid {
+.portfolio-grid {
 
   display:grid;
 
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-  gap:50px;
+  gap:40px;
 
 }
 
 
 
-.story img {
+.card {
+
+  overflow:hidden;
+
+}
+
+
+
+.card img {
 
   width:100%;
 
-  height:600px;
+  height:500px;
 
   object-fit:cover;
 
-}
-
-
-
-.story h3 {
-
-  margin-top:25px;
-
-  font-size:28px;
-
-  font-weight:400;
+  transition:.5s;
 
 }
 
 
 
-.story p {
+.card:hover img {
 
-  margin-top:10px;
-
-  color:#777;
+  transform:scale(1.05);
 
 }
+
+
+
+.card h3 {
+
+  margin-top:20px;
+
+  font-size:26px;
+
+  font-weight:300;
+
+}
+
 
 
 
@@ -209,11 +256,11 @@ nav a {
 
 .about {
 
+  background:#f7f5f1;
+
   padding:120px 20%;
 
   text-align:center;
-
-  background:#f7f7f5;
 
 }
 
@@ -221,11 +268,11 @@ nav a {
 
 .about h2 {
 
-  font-size:40px;
+  font-size:45px;
 
   font-weight:300;
 
-  margin-bottom:30px;
+  margin-bottom:35px;
 
 }
 
@@ -235,6 +282,8 @@ nav a {
 
   line-height:2;
 
+  font-size:18px;
+
   color:#555;
 
 }
@@ -243,9 +292,47 @@ nav a {
 
 
 
+.session {
+
+  padding:120px 60px;
+
+  text-align:center;
+
+}
+
+
+
+.session h2 {
+
+  font-size:45px;
+
+  font-weight:300;
+
+  margin-bottom:50px;
+
+}
+
+
+
+.session-list p {
+
+  font-size:20px;
+
+  margin:20px;
+
+  color:#555;
+
+}
+
+
+
+
+
+
+
 .booking {
 
-  padding:120px;
+  padding:130px 20px;
 
   text-align:center;
 
@@ -255,9 +342,19 @@ nav a {
 
 .booking h2 {
 
-  font-size:40px;
+  font-size:45px;
 
   font-weight:300;
+
+  margin-bottom:25px;
+
+}
+
+
+
+.booking p {
+
+  color:#666;
 
   margin-bottom:40px;
 
@@ -267,56 +364,102 @@ nav a {
 
 .booking a {
 
+  display:inline-block;
+
+  padding:16px 45px;
+
   border:1px solid #222;
-
-  padding:15px 40px;
-
-  text-decoration:none;
 
   color:#222;
 
+  text-decoration:none;
+
+}
+
+
+
+
+
+footer {
+
+  padding:30px;
+
+  text-align:center;
+
+  color:#777;
+
 }
 
 
 
 
 
-@media(max-width:768px){
+
+@media(max-width:900px){
 
 
-.header{
+.header {
 
-padding:25px;
-
-}
-
-
-nav{
-
-display:none;
+  padding:25px;
 
 }
 
 
-.hero-text h1{
 
-font-size:40px;
+nav {
 
-}
-
-
-.story-grid{
-
-grid-template-columns:1fr;
+ display:none;
 
 }
 
 
-.story img{
 
-height:450px;
+.hero-content h1 {
+
+ font-size:42px;
 
 }
+
+
+
+.hero-content p {
+
+ font-size:18px;
+
+}
+
+
+
+.portfolio {
+
+ padding:80px 25px;
+
+}
+
+
+
+.portfolio-grid {
+
+ grid-template-columns:1fr;
+
+}
+
+
+
+.card img {
+
+ height:450px;
+
+}
+
+
+
+.about {
+
+ padding:80px 30px;
+
+}
+
 
 
 }
