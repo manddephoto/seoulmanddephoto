@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 35px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  color: white;
+}
+
+
+.logo {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 35px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+
+
+.hero {
+
+  height: 100vh;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)
+  ),
+  url("images/hero/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color:white;
+
+}
+
+
+
+.hero-text h1 {
+
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 3px;
+
+}
+
+
+
+.hero-text p {
+
+  margin-top:25px;
+  font-size:22px;
+
+}
+
+
+
+.hero-text span {
+
+  display:block;
+  margin-top:10px;
+  font-size:16px;
+
+}
+
+
+
+.buttons {
+
+  margin-top:45px;
+
+}
+
+
+
+.buttons a {
+
+  display:inline-block;
+
+  padding:15px 35px;
+
+  border:1px solid white;
+
+  color:white;
+
+  text-decoration:none;
+
+  margin:10px;
+
+  font-size:14px;
+
+  transition:.3s;
+
+}
+
+
+
+.buttons a:hover {
+
+  background:white;
+  color:#222;
+
+}
+
+
+
+
+
+.stories {
+
+  padding:120px 60px;
+
+}
+
+
+
+.stories h2 {
+
+  text-align:center;
+
+  font-size:40px;
+
+  font-weight:300;
+
+  margin-bottom:70px;
+
+}
+
+
+
+.story-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:50px;
+
+}
+
+
+
+.story img {
+
+  width:100%;
+
+  height:600px;
+
+  object-fit:cover;
+
+}
+
+
+
+.story h3 {
+
+  margin-top:25px;
+
+  font-size:28px;
+
+  font-weight:400;
+
+}
+
+
+
+.story p {
+
+  margin-top:10px;
+
+  color:#777;
+
+}
+
+
+
+
+
+.about {
+
+  padding:120px 20%;
+
+  text-align:center;
+
+  background:#f7f7f5;
+
+}
+
+
+
+.about h2 {
+
+  font-size:40px;
+
+  font-weight:300;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.about p {
+
+  line-height:2;
+
+  color:#555;
+
+}
+
+
+
+
+
+.booking {
+
+  padding:120px;
+
+  text-align:center;
+
+}
+
+
+
+.booking h2 {
+
+  font-size:40px;
+
+  font-weight:300;
+
+  margin-bottom:40px;
+
+}
+
+
+
+.booking a {
+
+  border:1px solid #222;
+
+  padding:15px 40px;
+
+  text-decoration:none;
+
+  color:#222;
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.header{
+
+padding:25px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+.hero-text h1{
+
+font-size:40px;
+
+}
+
+
+.story-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.story img{
+
+height:450px;
+
+}
+
+
+}
